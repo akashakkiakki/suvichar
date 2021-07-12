@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "suvichar-646e6"
+  },
+  "targets": {
+    "suvichar-646e6": {
+      "hosting": {
+        "Suvichar": [
+          "suvichar-646e6"
+        ]
+      }
+    }
+  }
+}

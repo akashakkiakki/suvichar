@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="jumbotron text-center">
+            <p>
+               This is a single page application or single page website made for trial purpose only. <br>
+              I will update it after sometime, and please
+               suggest me what kind of update i have to do.
+            </p><hr>
+            <img src="https://firebasestorage.googleapis.com/v0/b/suvichar-646e6.appspot.com/o/IMG_20201015_161858_325%20(2).jpg?alt=media&token=74f6489a-3ce2-495b-8d3d-18e63340a67b" alt="akash sharma">
+        <h3>Akash Sharma
+<br><br>
+            <a href="https://www.facebook.com/profile.php?id=100005802708990">Facebook</a>&nbsp;
+            <a href="https://instagram.com/akash_sharma2022?utm_medium=copy_link">Instagram</a>
+
+        </h3>
+        <hr>
+    </div>
+        </div>
+</div><br>
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron text-center">
+
+            <h2>Ask me a question:</h2>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <label for="fname">Name</label><br>
+    <input 
+    class="form-control"
+
+    type="text"
+     id="fname"
+      name="fname"
+      ngModel
+      name="username"
+      required
+      ><br>
+    <label for="Email/Phone">email</label> <br>
+    <input 
+    class="form-control"
+    type="text"
+     name="Phone"
+      id="Phone"
+      ngModel
+      name="email"
+      required
+      email
+      #email="ngModel"
+      ><br>
+      <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+    <label for="Question">Enter text here...</label><br>
+    <textarea
+    class="form-control"
+     name="comment"
+      form="usrform"
+      ngModel
+      name="secret"
+      rows="3"
+      ></textarea><br>
+<button
+ class="btn btn-primary"
+  type="submit"
+  [disabled]="!f.valid"
+  >Submit</button>
+    
+</form>      
+    </div><hr>
+</div>
+</div>
+    <div class="row" *ngIf="submitted">
+        <div class="jumbotron text-center" id="answer">
+
+        <h2>Your Data</h2>
+        <p>Name: {{user.username}}</p>
+        <p>email: {{user.email}}</p>
+        <p>Question: {{user.secret}}</p>
+    </div>
+    </div>
